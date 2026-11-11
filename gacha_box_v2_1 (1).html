@@ -30,7 +30,7 @@
    ===================================================== */
 const STORAGE_KEY='gachabox_v20_local';
 const INITIAL_PRIVATE_PASSWORD='2468'; // Tukar password awal sebelum penggunaan sebenar.
-const SECRET_HOLD_MS=5000; // Tempoh hold SPACE: 5000 milisaat = 5 saat.
+const SECRET_HOLD_MS=4000; // Tempoh hold SPACE: 4000 milisaat = 5 saat.
 const IMAGE_MAX_EDGE=850; // Had dimensi gambar upload.
 const IMAGE_JPEG_QUALITY=.78; // Kualiti JPEG: lebih rendah = fail lebih kecil.
 const $=id=>document.getElementById(id);
@@ -66,7 +66,7 @@ function render(){
   $('lastWinner').textContent=last?`${last.prize} — ${last.time}`:'Belum ada cabutan.';
   // Public Admin sengaja hanya memaparkan hadiah biasa.
   $('adminPrizeRows').innerHTML=state.prizes.map((p,i)=>`<tr><td>${p.image?`<img class="thumb" src="${p.image}" alt="">`:'—'}</td><td>${esc(p.name)}</td><td>${esc(p.rarity)}</td><td>${p.qty} / ${p.initialQty}</td><td><button class="action danger" style="padding:5px 8px" onclick="removePrize(${i})">PADAM</button></td></tr>`).join('');
-  $('secretStatus').textContent=state.secret.name?`Hadiah rahsia direkodkan secara dalaman. Trigger: ${state.secret.used?'SUDAH DIGUNAKAN':'BELUM DIGUNAKAN'}.`:'Tiada hadiah rahsia ditetapkan.';
+  $('secretStatus').textContent=state.secret.name?`Hadiah direkodkan secara dalaman. Trigger: ${state.secret.used?'SUDAH DIGUNAKAN':'BELUM DIGUNAKAN'}.`:'Tiada hadiah ditetapkan.';
 }
 function removePrize(i){if(confirm('Padam hadiah ini?')){state.prizes.splice(i,1);saveState()}}
 /* BOLEH DIUBAH: pemproses gambar — resize dan simpan sebagai data URL. */
