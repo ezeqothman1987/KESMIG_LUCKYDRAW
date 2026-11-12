@@ -681,7 +681,7 @@ function showReward(item, isSecret = false) {
 
   // Paparkan overlay keputusan, tetapi mulakan dalam keadaan gelap.
   result.classList.add('show', 'pre-reveal');
-  result.classList.toggle('legendary', legendary);
+  //result.classList.toggle('legendary', legendary);
 
   // Sediakan semua teks hadiah terlebih dahulu; CSS menyembunyikannya sementara.
   $('resultEyebrow').textContent = isSecret
@@ -712,6 +712,7 @@ function showReward(item, isSecret = false) {
   rewardRevealTimer = window.setTimeout(() => {
     // Reveal: cerahkan imej dan tunjukkan nama, rarity serta maklumat penerima.
     result.classList.remove('pre-reveal');
+    result.classList.toggle('legendary', legendary);
 
     // Kesan visual dan bunyi hanya bermula selepas hadiah didedahkan.
     $('flash').classList.remove('go');
