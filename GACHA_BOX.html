@@ -276,7 +276,7 @@ function renderCollection(){
   $('collectionPage').textContent=pages?`Halaman ${collectionPageIndex+1} / ${pages}`:'0 / 0';
   $('collectionPrev').disabled=pages<=1;
   $('collectionNext').disabled=pages<=1;
-  $('showAllPrizes').textContent=`✦ VIEW ALL PRIZES (${items.length})`;
+  $('showAllPrizes').textContent=`✦ LIHAT SEMUA HADIAH (${items.length})`;
   // Galeri penuh hanya dikemas kini apabila dibuka supaya 40 gambar tidak
   // dibina semula pada setiap cabutan (lebih lancar di laptop projektor).
   if($('allPrizesModal').classList.contains('show'))renderAllCollection(items);
@@ -412,7 +412,7 @@ function drawSecret(){
     $('hint').textContent='Cabutan selesai. Sila teruskan kepada pemain seterusnya.';
   });
 }
-$('pullBtn').onclick=drawNormal;$('closeResult').onclick=()=>{$('result').classList.remove('show');$('particleLayer').innerHTML='';$('hint').textContent='Tekan PULL atau SPACE untuk mencuba nasib anda.';document.activeElement?.blur?.();document.body.focus()};$('fullscreenBtn').onclick=()=>{if(!document.fullscreenElement)document.documentElement.requestFullscreen?.();else document.exitFullscreen?.()};
+$('pullBtn').onclick=drawNormal;$('closeResult').onclick=()=>{$('result').classList.remove('show');$('particleLayer').innerHTML='';$('hint').textContent='Tekan Butang atau SPACEBAR untuk mencuba nasib anda.';document.activeElement?.blur?.();document.body.focus()};$('fullscreenBtn').onclick=()=>{if(!document.fullscreenElement)document.documentElement.requestFullscreen?.();else document.exitFullscreen?.()};
 /* BOLEH DIUBAH: Public Admin — prize pool biasa, export dan reset. */
 $('adminOpen').onclick=()=>$('publicModal').classList.add('show');$('closePublic').onclick=()=>{$('publicModal').classList.remove('show');document.activeElement?.blur?.();document.body.focus()};$('addPrize').onclick=async()=>{const name=$('prizeName').value.trim(),qty=Math.floor(Number($('prizeQty').value)),file=$('prizeImage').files[0];if(!name||!Number.isFinite(qty)||qty<1){alert('Masukkan nama hadiah dan kuantiti yang sah.');return}try{const image=await imageToData(file);state.prizes.push({id:crypto.randomUUID?.()||String(Date.now()+Math.random()),name,rarity:$('prizeRarity').value,qty,initialQty:qty,image});$('prizeName').value='';$('prizeQty').value=1;$('prizeImage').value='';saveState()}catch(e){alert(e.message)}};
 $('resetResults').onclick=()=>{if(!confirm('RESET RESULTS?\n\nSejarah dipadam, stok hadiah biasa dipulihkan ke jumlah asal dan status rekod dipulihkan. Senarai hadiah, gambar dan konfigurasi dikekalkan.'))return;state.prizes.forEach(p=>p.qty=p.initialQty);state.history=[];state.secret.used=false;saveState();$('hint').textContent='Keputusan telah direset. Prize pool sedia digunakan semula.'};
