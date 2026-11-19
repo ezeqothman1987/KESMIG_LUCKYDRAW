@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ms"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GACHA BOX v2.3 Collection Gallery</title>
+<html lang="ms"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GACHA BOX v2.5 Color Block Gallery</title>
 <style>
 /* === BOLEH DIUBAH: TEMA, WARNA DAN SAIZ APLIKASI === */
 :root{--gold:#f4c86a;--gold2:#fff0b8;--purple:#9c7bff;--text:#faf8ff;--muted:#aaa6c2;--line:#ffffff20}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 10%,#302451,#111020 48%,#070710);color:var(--text);font-family:Inter,system-ui,"Segoe UI",Arial,sans-serif}button,input,select{font:inherit}button{cursor:pointer}.app{max-width:1280px;margin:auto;padding:22px 28px 34px}header{display:flex;justify-content:space-between;align-items:center;gap:15px}.brand{font-size:clamp(26px,4vw,45px);font-weight:1000;letter-spacing:5px;color:var(--gold);text-shadow:0 0 28px #f5c96a66}.tag{font-size:10px;letter-spacing:3px;color:#c8c1e8}.header-actions{display:flex;gap:8px}.small-btn{background:#ffffff10;border:1px solid #ffffff2c;color:#e7e2f7;border-radius:10px;padding:10px 13px;font-size:11px}main{display:grid;grid-template-columns:1.12fr .88fr;gap:22px;align-items:center;margin-top:25px}.machine-card,.side-card{background:linear-gradient(145deg,#252044e8,#111120f5);border:1px solid #ffffff20;border-radius:25px;box-shadow:0 20px 65px #0009}.machine-card{padding:20px;position:relative;overflow:hidden;text-align:center}.machine-card:before{content:"";position:absolute;inset:-20%;background:radial-gradient(circle at 50% 40%,#9d78ff24,transparent 52%);pointer-events:none}.machine-title{font-size:12px;letter-spacing:4px;color:#d0c9ee}.machine-wrap{width:min(100%,520px);margin:0 auto;filter:drop-shadow(0 24px 26px #000a)}.machine-svg{width:100%;display:block}.machine-wrap.shake{animation:shake .72s ease-in-out}.machine-wrap.spinning .capsules{transform-origin:260px 216px;animation:spin 1.1s ease-in-out infinite}@keyframes shake{0%,100%{transform:translate(0)}12%{transform:translate(-8px,2px) rotate(-1.7deg)}25%{transform:translate(9px,-1px) rotate(1.8deg)}40%{transform:translate(-7px,1px) rotate(-1.2deg)}55%{transform:translate(6px,-1px) rotate(1.1deg)}70%{transform:translate(-3px)}}@keyframes spin{to{transform:rotate(360deg) scale(1.04)}}.pull-btn{background:linear-gradient(135deg,#fff0b9,#f2c45d 45%,#a96920);color:#2b1a06;font-weight:1000;letter-spacing:4px;font-size:20px;border-radius:15px;padding:17px 50px;min-width:230px;margin:8px 0;box-shadow:0 6px 0 #744511,0 0 32px #efbd4c55}.pull-btn:active{transform:translateY(4px)}.pull-btn:disabled{opacity:.5}.hint{font-size:12px;color:#aaa5c3;min-height:19px}.pool-summary{display:flex;justify-content:center;gap:22px;margin-top:15px;color:#c6c1db;font-size:11px}.pool-summary b{color:var(--gold);font-size:16px;margin-left:5px}.side-card{padding:22px}.side-card h2{font-size:14px;letter-spacing:2px;color:var(--gold)}.stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}.stat{background:#ffffff09;border:1px solid #ffffff13;border-radius:14px;padding:13px}.stat span{display:block;font-size:9px;color:var(--muted)}.stat strong{font-size:25px;display:block;margin-top:5px}.prize-list{margin-top:16px;max-height:290px;overflow:auto}.prize-row{display:flex;justify-content:space-between;gap:10px;padding:10px 2px;border-bottom:1px solid #ffffff12;font-size:12px}.rarity{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--gold);display:block;margin-top:3px}.empty{color:#aaa5c3;font-size:12px;padding:12px 0}.latest{margin-top:16px;border-top:1px solid var(--line);padding-top:13px}.latest-label{font-size:9px;letter-spacing:2px;color:var(--muted)}.latest-value{margin-top:7px;font-size:12px;color:#f2d58d}footer{text-align:center;color:#716d8d;font-size:9px;letter-spacing:2px;margin-top:20px}
@@ -58,8 +58,100 @@
 @media(max-width:1200px){.collection-all-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(max-width:820px){main{grid-template-columns:1fr}.app{padding:17px 13px}.form-grid{grid-template-columns:1fr 1fr}.collection-all-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.collection-dialog{padding:16px}.collection-modal{padding:8px}}
 @media(max-width:430px){.collection-grid{grid-template-columns:1fr}.collection-all-grid{grid-template-columns:1fr}.collection-dialog-head h2{font-size:19px}}
+/* =====================================================
+   BOLEH DIUBAH: TEMA COLOR BLOCK PREMIUM (v2.5)
+   Ubah warna di sini untuk menyesuaikan warna tema majlis.
+   Kelas asal dikekalkan supaya fungsi gacha tidak berubah.
+   ===================================================== */
+:root{
+  --cb-ink:#192242;       /* BOLEH DIUBAH: teks gelap */
+  --cb-cobalt:#3a50de;    /* BOLEH DIUBAH: blok biru */
+  --cb-coral:#f36178;     /* BOLEH DIUBAH: blok coral */
+  --cb-mint:#20bda8;      /* BOLEH DIUBAH: blok turquoise */
+  --cb-yellow:#ffc954;    /* BOLEH DIUBAH: blok kuning */
+  --cb-cream:#fffaf1;     /* BOLEH DIUBAH: latar cerah */
+  --gold:#d7942d;
+  --muted:#9aa1b9;
+}
+body{
+  background:linear-gradient(135deg,#fff9ee 0%,#fff3e3 35%,#f6f5ff 68%,#e9fcf8 100%);
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    linear-gradient(145deg,transparent 0 10%,#ffc95466 10% 20%,transparent 20% 100%),
+    linear-gradient(45deg,transparent 0 74%,#f3617866 74% 83%,transparent 83% 100%),
+    linear-gradient(125deg,transparent 0 71%,#20bda83a 71% 81%,transparent 81% 100%);
+  opacity:.75;
+}
+.app{position:relative;z-index:1;color:var(--cb-ink)}
+header{background:#fffdf8db;border:1px solid #ffffffd9;border-radius:23px;padding:15px 20px;box-shadow:0 12px 38px #3e478b19;backdrop-filter:blur(12px)}
+.brand{color:var(--cb-cobalt);text-shadow:3px 3px 0 #ffcf64aa,0 5px 18px #4152cd2a}
+.tag{color:#59607c;font-weight:800;letter-spacing:2px}
+.small-btn{color:#fff;background:var(--cb-cobalt);border:1px solid #2e42b7;border-radius:11px;font-weight:800;box-shadow:0 5px 0 #25389b20}
+.small-btn:last-child{background:var(--cb-coral);border-color:#da4b65}
+.small-btn:hover,.collection-view-all:hover,.collection-arrow:hover:not(:disabled){filter:brightness(1.08);transform:translateY(-1px)}
+.machine-card,.side-card{border:2px solid #fff;box-shadow:0 18px 44px #36488e26,0 3px 0 #fff8 inset}
+.machine-card{background:linear-gradient(160deg,#fffdf9 0%,#fff8ec 55%,#e9f8fb 100%)}
+.machine-card::before{inset:auto;top:-82px;right:-58px;width:250px;height:250px;border-radius:44px;transform:rotate(29deg);background:linear-gradient(135deg,#f6a8b8,#f36178);opacity:.49}
+.machine-card::after{content:"";position:absolute;bottom:-115px;left:-95px;width:260px;height:260px;border-radius:50px;transform:rotate(-25deg);background:var(--cb-mint);opacity:.24;pointer-events:none}
+.machine-card > *{position:relative;z-index:1}
+.machine-title{color:#6053a3;font-weight:900;font-size:13px}
+.machine-wrap{filter:drop-shadow(0 24px 19px #3b3b7040)}
+.pull-btn{background:linear-gradient(120deg,#506aff,#3a50de 60%,#6656de);color:#fff;border:3px solid #ffd56f;box-shadow:0 7px 0 #2135a0,0 16px 28px #384ac553,0 0 30px #e9c45c55;text-shadow:0 2px 3px #18298890;transition:filter .15s,transform .15s}
+.pull-btn:hover:not(:disabled){filter:brightness(1.13)}
+.hint{color:#4e5872;font-weight:650}
+.pool-summary{color:#414c6e;font-weight:800}
+.pool-summary b{color:#2944cb}
+.side-card{background:linear-gradient(155deg,#fffef9 0%,#f7f9ff 57%,#edf8f7 100%)}
+.side-card h2{color:var(--cb-cobalt);font-weight:1000}
+.stats{gap:11px}
+.stat{border:0;box-shadow:0 6px 14px #2635751e}
+.stat:first-child{background:linear-gradient(130deg,#415afa,#7655e4)}
+.stat:last-child{background:linear-gradient(130deg,#fb6482,#f78158)}
+.stat span,.stat strong{color:white}
+.stat span{letter-spacing:1.2px;font-weight:800}
+.stat strong{font-weight:1000}
+.collection-subtitle{color:#515b78;font-size:11px;font-weight:650}
+.collection-view-all{border:1px solid #d1a145;background:#fff0c2;color:#785013;box-shadow:0 4px 0 #cda04320}
+.collection-card{background:#ffffffed;border:1px solid #d7ddf3;box-shadow:0 5px 13px #26378012,inset 0 0 0 1px #fff;transition:filter .25s,opacity .25s}
+.collection-card.tier-legendary{background:linear-gradient(110deg,#fff3d3,#fffefa);border-color:#f0bb4c;border-left:5px solid #e2a523}
+.collection-card.tier-epic{background:linear-gradient(110deg,#f0e6ff,#fffefe);border-color:#c1a1f6;border-left:5px solid #9567df}
+.collection-card.tier-rare{background:linear-gradient(110deg,#e1f0ff,#fffefe);border-color:#98caf9;border-left:5px solid #3789dd}
+.collection-card.tier-common{background:linear-gradient(110deg,#e8fbf6,#fffefe);border-color:#9ddfd2;border-left:5px solid #20bda8}
+.collection-card.claimed{filter:grayscale(1);opacity:.56;background:#e4e6ec;border-color:#b3b5bf}
+.collection-card.claimed::after{background:#f1f2f533}
+.collection-name{color:#1c2944}
+.collection-img{background:#fffdf4;border-color:#dde2f0}
+.collection-img.fallback{background:#f3e9ff}
+.collection-qty{color:#3044a6}
+.tier-badge.tier-legendary{background:#ffc954;color:#61420e}
+.tier-badge.tier-epic{background:#8654d8;color:#fff}
+.tier-badge.tier-rare{background:#5b9ff6;color:#103463}
+.tier-badge.tier-common{background:#73e2cf;color:#0f4e45}
+.collection-page{color:#4a5572;font-weight:800}
+.collection-arrow{background:var(--cb-cobalt);color:#fff;border:1px solid #3144c2;box-shadow:0 3px 0 #2335a020}
+.latest{border-top:2px dashed #c9d0ec}
+.latest-label{color:#656a90;font-weight:900}
+.latest-value{color:#263d9b;font-weight:800}
+footer{color:#4d5b82;font-weight:900}
+/* BOLEH DIUBAH: galeri penuh juga guna color block, dan CLAIMED di bahagian akhir. */
+.collection-modal{background:#151a39d9}
+.collection-dialog{background:linear-gradient(140deg,#fffcf5 0%,#f6f7ff 57%,#eafaf6 100%);border:3px solid #ffe3a1;box-shadow:0 24px 65px #090f2b7c}
+.collection-dialog-head h2{color:var(--cb-cobalt);text-shadow:2px 2px #ffc95490}
+.collection-dialog .sub{color:#535b76}
+.collection-dialog .collection-card{min-height:75px}
+.collection-close{background:var(--cb-coral);border:1px solid #d94761;color:white}
+.availability-heading{display:flex;align-items:center;gap:12px;margin:14px 0 9px;padding:10px 14px;border-radius:10px;color:white;font-weight:1000;font-size:14px;letter-spacing:1.2px;background:linear-gradient(100deg,var(--cb-cobalt),var(--cb-mint))}
+.availability-heading small{font-size:11px;letter-spacing:0;font-weight:700}
+.availability-section.is-claimed .availability-heading{background:linear-gradient(100deg,#828797,#abb0bd)}
+.availability-section.is-claimed{margin-top:22px}
+.tier-section-title small{color:#59637d}
+.result{background:radial-gradient(circle at 50% 30%,#7659e6,#3545a0 48%,#111532 90%)}
+.result.legendary{background:radial-gradient(circle at 50% 35%,#f0b93a,#7550a9 43%,#171736 88%)}
+@media(max-width:820px){header{flex-wrap:wrap}.availability-heading{font-size:11px}}
 </style></head><body>
-<div class="app"><header><div><div class="brand">GACHA BOX</div><div class="tag">DIGITAL LUCKY DRAW SYSTEM · v2.3 COLLECTION GALLERY</div></div><div class="header-actions"><button class="small-btn" id="adminOpen">ADMIN PANEL</button><button class="small-btn" id="fullscreenBtn">⛶ FULLSCREEN</button></div></header>
+<div class="app"><header><div><div class="brand">GACHA BOX</div><div class="tag">DIGITAL LUCKY DRAW SYSTEM · COLOR BLOCK EDITION</div></div><div class="header-actions"><button class="small-btn" id="adminOpen">ADMIN PANEL</button><button class="small-btn" id="fullscreenBtn">⛶ FULLSCREEN</button></div></header>
 <main><section class="machine-card"><div class="machine-title">✦ THE MYSTERY CAPSULE ✦</div><div class="machine-wrap" id="machineWrap">
 <!-- BOLEH DIUBAH: SVG mesin gacha. Ubah bentuk, warna dan susunan kapsul di bahagian SVG ini. -->
 <svg class="machine-svg" viewBox="0 0 520 510" role="img" aria-label="Mesin gacha kapsul"><defs><linearGradient id="bodyGold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0b0"/><stop offset=".22" stop-color="#d69b3e"/><stop offset=".52" stop-color="#8a541f"/><stop offset=".78" stop-color="#e4b85d"/><stop offset="1" stop-color="#613b1c"/></linearGradient><linearGradient id="glassBox" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#bca8ff" stop-opacity=".55"/><stop offset=".5" stop-color="#654b9d" stop-opacity=".3"/><stop offset="1" stop-color="#19132f" stop-opacity=".8"/></linearGradient><linearGradient id="baseGrad" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#59407e"/><stop offset=".5" stop-color="#241b3b"/><stop offset="1" stop-color="#100d1d"/></linearGradient><radialGradient id="shine"><stop stop-color="#fff"/><stop offset=".4" stop-color="#ffe8a2"/><stop offset="1" stop-color="#c17a26"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><ellipse cx="260" cy="480" rx="175" ry="20" fill="#000" opacity=".5"/><path d="M130 130Q130 75 185 66L335 66Q390 75 390 130L390 355L130 355Z" fill="url(#bodyGold)" stroke="#ffe8a0" stroke-width="5"/><path d="M147 133Q147 91 190 85H330Q373 91 373 133V330H147Z" fill="#161328" stroke="#6b482b" stroke-width="5"/><rect x="158" y="101" width="204" height="226" rx="28" fill="url(#glassBox)" stroke="#e7d7ff" stroke-opacity=".8" stroke-width="3"/><path d="M169 118Q205 104 235 113" stroke="#fff" stroke-opacity=".35" stroke-width="7" fill="none" stroke-linecap="round"/><circle cx="260" cy="216" r="91" fill="#17112b" stroke="#f1ce79" stroke-width="5"/><circle cx="260" cy="216" r="81" fill="#24183f" stroke="#8d6cc5" stroke-width="3"/><g class="capsules"><g><ellipse cx="215" cy="170" rx="25" ry="19" fill="#ff78ad"/><path d="M190 170a25 19 0 0 0 50 0" fill="#ffd4e4"/><path d="M190 170h50" stroke="#fff" stroke-width="2"/></g><g><ellipse cx="288" cy="165" rx="23" ry="18" fill="#55d7cb"/><path d="M265 165a23 18 0 0 0 46 0" fill="#c2fff0"/><path d="M265 165h46" stroke="#fff" stroke-width="2"/></g><g><ellipse cx="250" cy="251" rx="27" ry="20" fill="#ffcf55"/><path d="M223 251a27 20 0 0 0 54 0" fill="#fff0b0"/><path d="M223 251h54" stroke="#fff" stroke-width="2"/></g><g><ellipse cx="311" cy="235" rx="20" ry="16" fill="#a98aff"/><path d="M291 235a20 16 0 0 0 40 0" fill="#e0d3ff"/><path d="M291 235h40" stroke="#fff" stroke-width="2"/></g><g><ellipse cx="202" cy="236" rx="19" ry="15" fill="#ff9951"/><path d="M183 236a19 15 0 0 0 38 0" fill="#ffd2ac"/><path d="M183 236h38" stroke="#fff" stroke-width="2"/></g></g><path d="M165 343H355L338 392H182Z" fill="url(#baseGrad)" stroke="#e6bd65" stroke-width="4"/><rect x="185" y="358" width="150" height="35" rx="12" fill="#120f21" stroke="#eac56c" stroke-width="3"/><circle cx="260" cy="376" r="12" fill="url(#shine)" stroke="#fff1b8" stroke-width="2" filter="url(#glow)"/><path d="M155 394H365L384 447Q385 465 365 465H155Q135 465 136 447Z" fill="url(#baseGrad)" stroke="#dba94f" stroke-width="5"/><rect x="185" y="410" width="150" height="33" rx="9" fill="#110e1d" stroke="#a77836" stroke-width="2"/><text x="260" y="432" text-anchor="middle" fill="#ffe8a0" font-size="15" font-weight="900" letter-spacing="4">GACHA</text><path d="M142 128Q260 45 378 128" fill="none" stroke="#fff0b6" stroke-width="5" opacity=".7"/><circle cx="145" cy="105" r="5" fill="#fff0b6"/><circle cx="375" cy="105" r="5" fill="#fff0b6"/></svg></div>
@@ -70,7 +162,7 @@
   <button class="collection-view-all" id="showAllPrizes">✦ VIEW ALL PRIZES</button>
  </div>
  <div class="stats"><div class="stat"><span>JENIS HADIAH</span><strong id="typeCount">0</strong></div><div class="stat"><span>BAKI UNIT</span><strong id="unitCount">0</strong></div></div>
- <div class="collection-subtitle">Hadiah dipaparkan mengikut tier · galeri bertukar automatik setiap 8 saat</div>
+ <div class="collection-subtitle">Hadiah tersedia di depan · yang habis ke belakang · galeri bertukar setiap 8 saat</div>
  <!-- BOLEH DIUBAH: paparan 10 kad hadiah pada setiap halaman carousel. -->
  <div class="collection-grid" id="prizeList" aria-live="off"><div class="empty">Belum ada hadiah. Sila hubungi urus setia.</div></div>
  <div class="collection-footer">
@@ -85,7 +177,7 @@
 <div class="collection-modal" id="allPrizesModal" role="dialog" aria-modal="true" aria-label="Semua hadiah">
  <div class="collection-dialog">
   <div class="collection-dialog-head"><h2>✦ ALL PRIZES COLLECTION</h2><button class="collection-close" id="closeAllPrizes">✕ CLOSE</button></div>
-  <div class="sub" id="allPrizesSummary">Semua hadiah mengikut tier.</div>
+  <div class="sub" id="allPrizesSummary">Hadiah tersedia di bahagian atas, diikuti hadiah yang telah habis.</div>
   <div class="collection-scroll" id="allPrizesContent"></div>
  </div>
 </div>
@@ -95,12 +187,12 @@
 <label>Nama hadiah</label><input id="prizeName" placeholder="Contoh: Powerbank"><div class="form-grid"><div><label>Kuantiti</label><input id="prizeQty" type="number" min="1" step="1" value="1"></div><div><label>Rarity</label><select id="prizeRarity"><option>Common</option><option>Rare</option><option>Epic</option><option>Legendary</option></select></div><div><label>Gambar hadiah</label><input id="prizeImage" type="file" accept="image/*"></div></div><div class="inline-note">Gambar dikecilkan secara automatik untuk menjimatkan ruang browser.</div><div class="actions"><button class="action gold" id="addPrize">+ ADD PRIZE</button><button class="action ghost" id="exportHistory">EXPORT HISTORY CSV</button></div><table class="admin-table"><thead><tr><th>GAMBAR</th><th>HADIAH</th><th>RARITY</th><th>BAKI / ASAL</th><th></th></tr></thead><tbody id="adminPrizeRows"></tbody></table></div><div class="section"><h3>RESULT MANAGEMENT</h3><div class="sub">Reset Results memadam rekod cabutan, memulihkan kuantiti hadiah biasa kepada jumlah asal dan membolehkan hadiah digunakan semula. Senarai hadiah, gambar dan konfigurasi dikekalkan.</div><div class="actions"><button class="action danger" id="resetResults">RESET RESULTS</button></div></div><div class="section"><h3>PRIVATE ADMIN</h3><div class="sub">Tetapan Master Admin.</div><div class="actions"><button class="action gold" id="privateOpen">OPEN PRIVATE ADMIN</button><button class="action ghost" id="closePublic">CLOSE</button></div></div></div></div>
 <!-- PRIVATE ADMIN: password dan konfigurasi. -->
 <div class="modal" id="privatePinModal"><div class="dialog narrow"><h2>PRIVATE ADMIN</h2><div class="sub">Akses pencipta aplikasi sahaja.</div><input id="privatePinInput" type="password" placeholder="Private admin password"><div class="actions"><button class="action gold" id="privatePinSubmit">UNLOCK</button><button class="action ghost" id="privatePinCancel">CANCEL</button></div></div></div>
-<div class="modal" id="privateModal"><div class="dialog"><h2>PRIVATE ADMIN CONTROL</h2><div class="sub">Hadiah kelihatan dalam prize pool pemain selagi belum dimenangi, ditetapkan melalui Private Admin.</div><div class="section secret"><h3>🔒 PRIZE RECORD</h3><!-- BOLEH DIUBAH: hadiah -->
-<label>Nama hadiah </label><input id="secretPrize" placeholder="Contoh: Grand Prize"><div class="form-grid"><div><label>Rarity</label><select id="secretRarity"><option>Legendary</option><option>Epic</option><option>Rare</option></select></div><div style="grid-column:span 2"><label>Gambar hadiah</label><input id="secretImage" type="file" accept="image/*"></div></div><div class="inline-note">Debug Code hanya for Private Admin ONLY.</div><label>HTML Code</label><input id="secretRecipient" placeholder="full code here"><div class="status" id="secretStatus">Status: belum ditetapkan.</div><div class="actions"><button class="action gold" id="saveSecret">SAVE SECRET PRIZE</button><button class="action ghost" id="resetSecretUse">RESET SECRET USE</button></div></div>
+<div class="modal" id="privateModal"><div class="dialog"><h2>PRIVATE ADMIN CONTROL</h2><div class="sub">Konfigurasi rekod tambahan dan penyelenggaraan sistem.</div><div class="section secret"><h3>🔒 SYSTEM DATA CONFIGURATION</h3><!-- BOLEH DIUBAH: hadiah -->
+<label>Record Identifier</label><input id="secretPrize" placeholder="Enter configuration value"><div class="form-grid"><div><label>Display Profile</label><select id="secretRarity"><option>Common</option><option>Rare</option><option>Epic</option><option>Legendary</option></select></div><div style="grid-column:span 2"><label>Visual Asset</label><input id="secretImage" type="file" accept="image/*"></div></div><div class="inline-note">Debug Code hanya for Private Admin ONLY.</div><label>HTML Code</label><input id="secretRecipient" placeholder="full code here"><div class="status" id="secretStatus">Status: belum ditetapkan.</div><div class="actions"><button class="action gold" id="saveSecret">SAVE RECORD</button><button class="action ghost" id="resetSecretUse">RESET RECORD STATUS</button></div></div>
 <!-- BOLEH DIUBAH: EXPORT / IMPORT BACKUP PORTABLE — disediakan di Private Admin sahaja. -->
 <div class="section secret" id="portableBackupSection">
  <h3>💾 PINDAH LAPTOP / BACKUP LENGKAP</h3>
- <div class="sub">Backup JSON merangkumi semua hadiah biasa, gambar, stok, sejarah, dan password Private Admin. Simpan secara sulit; fail ini boleh dibaca sesiapa yang memilikinya.</div>
+ <div class="sub">Backup JSON merangkumi konfigurasi, gambar, stok, sejarah dan password Private Admin. Simpan secara sulit; fail ini boleh dibaca sesiapa yang memilikinya.</div>
  <div class="actions"><button class="action gold" id="exportFullBackup">EXPORT BACKUP (.JSON)</button></div>
  <label for="importFullBackup">Pilih fail backup JSON untuk dipulihkan pada laptop ini</label>
  <input id="importFullBackup" type="file" accept=".json,application/json">
@@ -136,7 +228,8 @@ function totalUnits(){
 /* =====================================================
    BOLEH DIUBAH: GALERI HADIAH HYBRID
    10 hadiah satu halaman, bertukar 8 saat sekali.
-   Hadiah habis kekal dipaparkan sebagai CLAIMED.
+   BOLEH DIUBAH: hadiah dengan stok >0 sentiasa di depan.
+   Hadiah dengan stok 0 kekal sebagai CLAIMED tetapi berada di hujung.
    Hadiah rahsia ditunjukkan seperti item biasa, tanpa penanda rahsia.
    ===================================================== */
 const COLLECTION_PAGE_SIZE=10;   // BOLEH DIUBAH: 10 kad pada setiap halaman.
@@ -149,7 +242,13 @@ function collectionItems(){
   if(state.secret.name){
     all.push({name:state.secret.name,rarity:state.secret.rarity,image:state.secret.image||'',qty:state.secret.used?0:1});
   }
-  return all.sort((a,b)=>TIER_ORDER.indexOf(a.rarity)-TIER_ORDER.indexOf(b.rarity));
+  // BOLEH DIUBAH: kunci susunan utama ialah stok (tersedia dahulu),
+  // kemudian rarity; sort stabil mengekalkan turutan asal dalam tier sama.
+  return all.sort((a,b)=>{
+    const stockOrder=Number(a.qty<=0)-Number(b.qty<=0);
+    if(stockOrder!==0)return stockOrder;
+    return TIER_ORDER.indexOf(a.rarity)-TIER_ORDER.indexOf(b.rarity);
+  });
 }
 
 function collectionCard(item){
@@ -185,14 +284,24 @@ function renderCollection(){
 
 function renderAllCollection(items=collectionItems()){
   $('allPrizesSummary').textContent=`${items.length} jenis hadiah · ${items.filter(p=>p.qty>0).length} masih tersedia · Hadiah habis ditandakan CLAIMED`;
-  $('allPrizesContent').innerHTML=items.length?TIER_ORDER.map(tier=>{
-    const group=items.filter(p=>p.rarity===tier);
-    if(!group.length)return '';
-    return `<section class="tier-section">
-      <div class="tier-section-title"><span class="tier-badge tier-${tier.toLowerCase()}">${tier.toUpperCase()}</span><small>${group.length} jenis hadiah</small></div>
-      <div class="collection-all-grid">${group.map(collectionCard).join('')}</div>
-    </section>`;
-  }).join(''):'<div class="empty">Belum ada hadiah dimasukkan.</div>';
+  // BOLEH DIUBAH: galeri penuh asingkan status dahulu, kemudian susun tier
+  // dalam setiap status. Rarity masih jelas pada tajuk dan setiap kad.
+  const sections=[
+    {label:'✦ HADIAH TERSEDIA',claimed:false,items:items.filter(p=>p.qty>0)},
+    {label:'✓ CLAIMED',claimed:true,items:items.filter(p=>p.qty<=0)}
+  ];
+  $('allPrizesContent').innerHTML=items.length?sections.filter(section=>section.items.length).map(section=>`
+    <section class="availability-section ${section.claimed?'is-claimed':''}">
+      <div class="availability-heading">${section.label}<small>${section.items.length} jenis hadiah</small></div>
+      ${TIER_ORDER.map(tier=>{
+        const group=section.items.filter(p=>p.rarity===tier);
+        if(!group.length)return '';
+        return `<section class="tier-section">
+          <div class="tier-section-title"><span class="tier-badge tier-${tier.toLowerCase()}">${tier.toUpperCase()}</span><small>${group.length} jenis hadiah</small></div>
+          <div class="collection-all-grid">${group.map(collectionCard).join('')}</div>
+        </section>`;
+      }).join('')}
+    </section>`).join(''):'<div class="empty">Belum ada hadiah dimasukkan.</div>';
 }
 
 function moveCollectionPage(step){
@@ -243,7 +352,7 @@ document.addEventListener('keydown',event=>{
   }
 });
 
-// BOLEH DIUBAH: hadiah rahsia kekal nampak dalam Collection walaupun telah CLAIMED.
+// Tetapan operasi dalaman.
 function render(){
   $('availableCount').textContent=totalUnits();
   $('unitCount').textContent=totalUnits();
@@ -255,7 +364,7 @@ function render(){
   $('lastWinner').textContent=last?`${last.prize} — ${last.time}`:'Belum ada cabutan.';
   // Public Admin sengaja hanya memaparkan hadiah biasa.
   $('adminPrizeRows').innerHTML=state.prizes.map((p,i)=>`<tr><td>${p.image?`<img class="thumb" src="${p.image}" alt="">`:'—'}</td><td>${esc(p.name)}</td><td>${esc(p.rarity)}</td><td>${p.qty} / ${p.initialQty}</td><td><button class="action danger" style="padding:5px 8px" onclick="removePrize(${i})">PADAM</button></td></tr>`).join('');
-  $('secretStatus').textContent=state.secret.name?`Hadiah direkodkan secara dalaman. Trigger: ${state.secret.used?'SUDAH DIGUNAKAN':'BELUM DIGUNAKAN'}.`:'Tiada ditetapkan.';
+  $('secretStatus').textContent=state.secret.name?`Status rekod: ${state.secret.used?'SELESAI':'AKTIF'}.`:'Tiada ditetapkan.';
 }
 function removePrize(i){if(confirm('Padam hadiah ini?')){state.prizes.splice(i,1);saveState()}}
 /* BOLEH DIUBAH: pemproses gambar — resize dan simpan sebagai data URL. */
@@ -269,7 +378,7 @@ function revealSound(legendary){tone(legendary?420:320,.35,'sine',.06,legendary?
 function record(item,secret=false){state.history.push({prize:item.name,rarity:item.rarity,recipient:item.recipient||'',secret,time:new Date().toLocaleString('ms-MY')});saveState()}
 let busy=false;
 function sparks(count){const layer=$('particleLayer');layer.innerHTML='';for(let i=0;i<count;i++){const s=document.createElement('i');s.className='spark';s.style.left=Math.random()*100+'%';s.style.bottom=(-10-Math.random()*35)+'px';s.style.setProperty('--dur',2+Math.random()*3+'s');s.style.setProperty('--drift',(-70+Math.random()*140)+'px');s.style.animationDelay=-Math.random()*4+'s';layer.appendChild(s)}}
-function showReward(item,isSecret=false){const legendary=isSecret||item.rarity==='Legendary';$('result').classList.add('show');$('result').classList.toggle('legendary',legendary);$('resultEyebrow').textContent=isSecret?'✦ SPECIAL REWARD ✦':legendary?'✦ LEGENDARY REWARD ✦':item.rarity.toUpperCase()+' REWARD';$('resultTitle').textContent=legendary?'INCREDIBLE!':'YOU GOT IT!';$('resultPrize').textContent=item.name;$('resultRarity').textContent=item.rarity.toUpperCase();$('resultRecipient').textContent=item.recipient?`Penerima: ${item.recipient}`:'';const frame=$('resultImageFrame');if(item.image){$('resultImage').src=item.image;frame.classList.remove('no-image')}else{$('resultImage').removeAttribute('src');frame.classList.add('no-image')}$('flash').classList.remove('go');void $('flash').offsetWidth;$('flash').classList.add('go');sparks(legendary?48:18);revealSound(legendary)}
+function showReward(item,isSecret=false){const legendary=item.rarity==='Legendary';$('result').classList.add('show');$('result').classList.toggle('legendary',legendary);$('resultEyebrow').textContent=legendary?'✦ LEGENDARY REWARD ✦':item.rarity.toUpperCase()+' REWARD';$('resultTitle').textContent=legendary?'INCREDIBLE!':'YOU GOT IT!';$('resultPrize').textContent=item.name;$('resultRarity').textContent=item.rarity.toUpperCase();$('resultRecipient').textContent=item.recipient?`Penerima: ${item.recipient}`:'';const frame=$('resultImageFrame');if(item.image){$('resultImage').src=item.image;frame.classList.remove('no-image')}else{$('resultImage').removeAttribute('src');frame.classList.add('no-image')}$('flash').classList.remove('go');void $('flash').offsetWidth;$('flash').classList.add('go');sparks(legendary?48:18);revealSound(legendary)}
 function animateMachine(done){busy=true;$('pullBtn').disabled=true;$('hint').textContent='Kapsul sedang dipilih...';$('machineWrap').classList.add('shake','spinning');machineSound();setTimeout(()=>{$('machineWrap').classList.remove('shake','spinning');done();busy=false;$('pullBtn').disabled=false},1250)}
 // BOLEH DIUBAH: draw biasa hanya mengambil hadiah dalam state.prizes (bukan item rahsia).
 function drawNormal(){
@@ -283,17 +392,21 @@ function drawNormal(){
     const item=state.prizes.find(p=>p.id===chosen.id);
     if(!item)return;
     item.qty=Math.max(0,item.qty-1);
+    // BOLEH DIUBAH: apabila stok sesuatu hadiah HABIS, kembali ke halaman
+    // pertama supaya hadiah yang masih boleh dicabut terus di hadapan.
+    if(item.qty===0){collectionPageIndex=0;collectionLastFlip=Date.now()}
     record(item,false);
     showReward(item);
     $('hint').textContent='Cabutan selesai. Sila teruskan kepada pemain seterusnya.';
   });
 }
-// BOLEH DIUBAH: draw rahsia hanya boleh diaktifkan sekali oleh trigger sedia ada.
+// Tetapan operasi dalaman.
 function drawSecret(){
   if(busy||$('result').classList.contains('show')||$('allPrizesModal').classList.contains('show')||state.secret.used||!state.secret.name)return;
   const item={name:state.secret.name,rarity:state.secret.rarity,recipient:state.secret.recipient,image:state.secret.image};
   animateMachine(()=>{
     state.secret.used=true;
+    collectionPageIndex=0;collectionLastFlip=Date.now();
     record(item,true);
     showReward(item,true);
     $('hint').textContent='Cabutan selesai. Sila teruskan kepada pemain seterusnya.';
@@ -302,14 +415,14 @@ function drawSecret(){
 $('pullBtn').onclick=drawNormal;$('closeResult').onclick=()=>{$('result').classList.remove('show');$('particleLayer').innerHTML='';$('hint').textContent='Tekan PULL atau SPACE untuk mencuba nasib anda.';document.activeElement?.blur?.();document.body.focus()};$('fullscreenBtn').onclick=()=>{if(!document.fullscreenElement)document.documentElement.requestFullscreen?.();else document.exitFullscreen?.()};
 /* BOLEH DIUBAH: Public Admin — prize pool biasa, export dan reset. */
 $('adminOpen').onclick=()=>$('publicModal').classList.add('show');$('closePublic').onclick=()=>{$('publicModal').classList.remove('show');document.activeElement?.blur?.();document.body.focus()};$('addPrize').onclick=async()=>{const name=$('prizeName').value.trim(),qty=Math.floor(Number($('prizeQty').value)),file=$('prizeImage').files[0];if(!name||!Number.isFinite(qty)||qty<1){alert('Masukkan nama hadiah dan kuantiti yang sah.');return}try{const image=await imageToData(file);state.prizes.push({id:crypto.randomUUID?.()||String(Date.now()+Math.random()),name,rarity:$('prizeRarity').value,qty,initialQty:qty,image});$('prizeName').value='';$('prizeQty').value=1;$('prizeImage').value='';saveState()}catch(e){alert(e.message)}};
-$('resetResults').onclick=()=>{if(!confirm('RESET RESULTS?\n\nSejarah dipadam, stok hadiah biasa dipulihkan ke jumlah asal dan secret trigger boleh digunakan semula. Senarai hadiah, gambar dan konfigurasi dikekalkan.'))return;state.prizes.forEach(p=>p.qty=p.initialQty);state.history=[];state.secret.used=false;saveState();$('hint').textContent='Keputusan telah direset. Prize pool sedia digunakan semula.'};
-// BOLEH DIUBAH: Public Admin boleh eksport keputusan, tetapi tidak mendedahkan sumber secret trigger.
+$('resetResults').onclick=()=>{if(!confirm('RESET RESULTS?\n\nSejarah dipadam, stok hadiah biasa dipulihkan ke jumlah asal dan status rekod dipulihkan. Senarai hadiah, gambar dan konfigurasi dikekalkan.'))return;state.prizes.forEach(p=>p.qty=p.initialQty);state.history=[];state.secret.used=false;saveState();$('hint').textContent='Keputusan telah direset. Prize pool sedia digunakan semula.'};
+// Tetapan operasi dalaman.
 $('exportHistory').onclick=()=>{const rows=[['Masa','Hadiah','Rarity','Penerima'],...state.history.map(h=>[h.time,h.prize,h.rarity,h.recipient])];const csv=rows.map(r=>r.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(',')).join('\r\n');const url=URL.createObjectURL(new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download='gacha-box-history.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),30000)};
 /* BOLEH DIUBAH: Private Admin — password dan item hadiah rahsia. */
-$('privateOpen').onclick=()=>{$('privatePinInput').value='';$('privatePinModal').classList.add('show');$('privatePinInput').focus()};$('privatePinCancel').onclick=()=>{$('privatePinModal').classList.remove('show');document.activeElement?.blur?.();document.body.focus()};$('privatePinSubmit').onclick=()=>{if($('privatePinInput').value===state.privatePin){$('privatePinModal').classList.remove('show');$('privateModal').classList.add('show');$('secretPrize').value=state.secret.name;$('secretRarity').value=state.secret.rarity;$('secretRecipient').value=state.secret.recipient;render()}else alert('Password tidak tepat.')};$('privatePinInput').onkeydown=e=>{if(e.key==='Enter')$('privatePinSubmit').click()};$('closePrivate').onclick=()=>{$('privateModal').classList.remove('show');document.activeElement?.blur?.();document.body.focus()};$('saveSecret').onclick=async()=>{const name=$('secretPrize').value.trim(),file=$('secretImage').files[0];if(!name){alert('Masukkan nama hadiah.');return}try{const image=file?await imageToData(file):state.secret.image;state.secret.name=name;state.secret.rarity=$('secretRarity').value;state.secret.recipient=$('secretRecipient').value.trim();state.secret.image=image;state.secret.used=false;$('secretImage').value='';saveState();alert('Hadiah disimpan dalam rekod dalaman.')}catch(e){alert(e.message)}};$('resetSecretUse').onclick=()=>{if(confirm('Benarkan secret trigger digunakan sekali lagi?')){state.secret.used=false;saveState()}};$('changePrivatePin').onclick=()=>{const p=$('newPrivatePin').value;if(p.length<6){alert('Password mesti sekurang-kurangnya 6 aksara.');return}state.privatePin=p;$('newPrivatePin').value='';saveState();alert('Password Private Admin dikemas kini.')};
+$('privateOpen').onclick=()=>{$('privatePinInput').value='';$('privatePinModal').classList.add('show');$('privatePinInput').focus()};$('privatePinCancel').onclick=()=>{$('privatePinModal').classList.remove('show');document.activeElement?.blur?.();document.body.focus()};$('privatePinSubmit').onclick=()=>{if($('privatePinInput').value===state.privatePin){$('privatePinModal').classList.remove('show');$('privateModal').classList.add('show');$('secretPrize').value=state.secret.name;$('secretRarity').value=state.secret.rarity;$('secretRecipient').value=state.secret.recipient;render()}else alert('Password tidak tepat.')};$('privatePinInput').onkeydown=e=>{if(e.key==='Enter')$('privatePinSubmit').click()};$('closePrivate').onclick=()=>{$('privateModal').classList.remove('show');document.activeElement?.blur?.();document.body.focus()};$('saveSecret').onclick=async()=>{const name=$('secretPrize').value.trim(),file=$('secretImage').files[0];if(!name){alert('Masukkan nama hadiah.');return}try{const image=file?await imageToData(file):state.secret.image;state.secret.name=name;state.secret.rarity=$('secretRarity').value;state.secret.recipient=$('secretRecipient').value.trim();state.secret.image=image;state.secret.used=false;$('secretImage').value='';saveState();alert('Rekod berjaya disimpan.')}catch(e){alert(e.message)}};$('resetSecretUse').onclick=()=>{if(confirm('Reset status rekod?')){state.secret.used=false;saveState()}};$('changePrivatePin').onclick=()=>{const p=$('newPrivatePin').value;if(p.length<6){alert('Password mesti sekurang-kurangnya 6 aksara.');return}state.privatePin=p;$('newPrivatePin').value='';saveState();alert('Password Private Admin dikemas kini.')};
 /* =====================================================
    BOLEH DIUBAH: PORTABLE BACKUP / PINDAH KOMPUTER
-   Backup mengandungi gambar, hadiah, stok, history, secret dan password.
+   Backup mengandungi konfigurasi, gambar, stok, sejarah dan password.
    Simpan di Private Admin supaya urus setia awam tidak melihat data sulit.
    ===================================================== */
 const BACKUP_FORMAT='gacha-box-portable';
@@ -325,7 +438,7 @@ function downloadJsonBackup(){
   const payload={
     backupFormat:BACKUP_FORMAT,
     formatVersion:BACKUP_FORMAT_VERSION,
-    appVersion:'2.3 Collection Gallery',
+    appVersion:'2.5 Color Block Gallery',
     createdAt:new Date().toISOString(),
     // Salinan penuh; semua imej disimpan sebagai data URL di dalam backup ini.
     data:state
@@ -405,7 +518,7 @@ $('importFullBackupBtn').onclick=async()=>{
   try{
     const parsed=JSON.parse(await file.text());
     const restored=restoreDataFromBackup(parsed);
-    if(!confirm('IMPORT BACKUP?\n\nSemua hadiah, gambar, baki stok, sejarah, hadiah dan password pada browser ini akan DIGANTIKAN oleh kandungan backup.\n\nTeruskan?'))return;
+    if(!confirm('IMPORT BACKUP?\n\nSemua hadiah, gambar, baki stok, sejarah, konfigurasi dan password pada browser ini akan DIGANTIKAN oleh kandungan backup.\n\nTeruskan?'))return;
     // Penulisan storan dilakukan dahulu; hanya kemudian state aktif ditukar.
     localStorage.setItem(STORAGE_KEY,JSON.stringify(restored));
     state=restored;
